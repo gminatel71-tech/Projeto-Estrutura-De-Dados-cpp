@@ -20,14 +20,14 @@ int main() {
     cout << endl;
     cout << "Sorted Array: ";
     for(i = 0; i < n; i++) {
-        min = i;
+        min = i; // current position become the smallest value
 
-        for(j = i + 1; j < n; j++) {
+        for(j = i + 1; j < n; j++) { // j is in front of position i
             if(arr[j] < arr[min]) {
-                min = j;
+                min = j; // swap the smallest position
             }
         }
-        if(min != i) {
+        if(min != i) { // swap
             temp = arr[i];
             arr[i] = arr[min];
             arr[min] = temp;

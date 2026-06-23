@@ -14,15 +14,15 @@ int main() {
     cout << endl;
     
     cout << "Sorted Array: ";
-    for(i = 1; i < n; i++) {
-        key = arr[i];
-        j = i - 1;
+    for(i = 1; i < n; i++) { 
+        key = arr[i]; // get values in current position
+        j = i - 1; // j considers the value that comes before the current
 
-        while ((j >= 0) && (key < arr[j])) {
-            arr[j + 1] = arr[j];
-            j = j - 1; 
+        while ((j >= 0) && (key < arr[j])) { // loop goes through the array until find a place for key (arr[i]) have to be
+            arr[j + 1] = arr[j]; // Value in front receives the current value 
+            j = j - 1; // decreased the position until -1 (that says like: 'loop is empty, stop it')
         }
-        arr[j + 1] = key;
+        arr[j + 1] = key; // value in front of is the new key
         
     }
     for(i = 0; i < n; i++) {
